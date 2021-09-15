@@ -14,7 +14,7 @@ const rightArrow = document.getElementById('right')
 
 let activeSlide = 0
 
-const getInterbalTime =  setInterval( function() { 
+const getIntervalTime =  setInterval( function() { 
         activeSlide++
 
         if (activeSlide > slides.length - 1) {
@@ -55,7 +55,7 @@ setBgToBack()
 function setActiveSlide() {
     slides.forEach(slide => {
         slide.classList.remove('active')
-        slide.addEventListener('mouseover', () => clearInterval(getInterbalTime))
+        slide.addEventListener('mouseover', () => clearInterval(getIntervalTime))
     })
 
     slides[activeSlide].classList.add('active')
